@@ -1,0 +1,3840 @@
+1
+00:00:00,000 --> 00:00:01,000
+a
+
+2
+00:00:15,760 --> 00:00:17,660
+job done for you.
+
+3
+00:00:18,100 --> 00:00:19,440
+Why bother with grid.
+
+4
+00:00:19,820 --> 00:00:25,460
+Grid can do things that flexbox can't and I think actually if you simplify grid down
+
+5
+00:00:25,460 --> 00:00:27,120
+and start using it in very simple ways.
+
+6
+00:00:27,300 --> 00:00:29,780
+It can actually be easier to use and learn
+
+7
+00:00:29,780 --> 00:00:32,200
+than Flexbox can, and that's why I want to look at
+
+8
+00:00:32,200 --> 00:00:33,420
+how we can simplify Grid,
+
+9
+00:00:33,520 --> 00:00:35,500
+and look at the easy ways to get working with it,
+
+10
+00:00:35,580 --> 00:00:37,260
+and we're going to be doing that in this video.
+
+11
+00:00:40,420 --> 00:00:41,720
+Hello, my friend and friends,
+
+12
+00:00:41,840 --> 00:00:43,300
+and welcome back to yet another video.
+
+13
+00:00:43,380 --> 00:00:45,180
+I'm so glad that you've come to join me once again.
+
+14
+00:00:45,240 --> 00:00:46,720
+And if you're new here, my name is Kevin
+
+15
+00:00:46,720 --> 00:00:48,280
+and here at my channel, I hope you fall,
+
+16
+00:00:48,700 --> 00:00:50,320
+madly, deeply in love with 2020 CSS.
+
+17
+00:00:50,340 --> 00:00:51,940
+And if not, fall in love with it.
+
+18
+00:00:51,980 --> 00:00:53,820
+I hope to at least make you a little bit less
+
+19
+00:00:53,820 --> 00:00:55,080
+frustrated with it.
+
+20
+00:00:55,080 --> 00:00:57,580
+And today we're doing that by exploring a topic
+
+21
+00:00:57,580 --> 00:01:00,400
+that is one of my favorite things to use with CSS,
+
+22
+00:01:00,700 --> 00:01:01,860
+which is CSS Grid.
+
+23
+00:01:02,120 --> 00:01:04,740
+In simplifying grid, I actually think there's different ways
+
+24
+00:01:04,740 --> 00:01:07,260
+that we can simplify it, so I'm gonna be breaking this down
+
+25
+00:01:07,260 --> 00:01:08,860
+and we're gonna be examining this layout
+
+26
+00:01:08,860 --> 00:01:10,220
+with two different approaches.
+
+27
+00:01:10,480 --> 00:01:11,680
+So one of them is going to be more of like
+
+28
+00:01:11,680 --> 00:01:13,680
+a natural starting point, I think, for grid
+
+29
+00:01:13,680 --> 00:01:15,420
+and just understanding the very basics
+
+30
+00:01:15,420 --> 00:01:17,640
+of how we can simplify Grid to get the layout
+
+31
+00:01:17,640 --> 00:01:19,180
+that we want it to make for us.
+
+32
+00:01:19,260 --> 00:01:21,060
+And then the other approach we're gonna sort of
+
+33
+00:01:21,060 --> 00:01:22,720
+scrap what we did and take another way
+
+34
+00:01:22,720 --> 00:01:24,380
+that I really like to work today,
+
+35
+00:01:24,800 --> 00:01:26,660
+and what I'd really encourage you to do
+
+36
+00:01:26,660 --> 00:01:27,620
+is watch both of them,
+
+37
+00:01:27,800 --> 00:01:29,660
+and see which one speaks to you a little bit more.
+
+38
+00:01:29,820 --> 00:01:31,240
+Some are more practical for some layouts,
+
+39
+00:01:31,360 --> 00:01:32,940
+some are more practical for other layouts,
+
+40
+00:01:33,360 --> 00:01:34,340
+but for both of them,
+
+41
+00:01:34,400 --> 00:01:35,120
+I think they're very nice,
+
+42
+00:01:35,220 --> 00:01:36,640
+simple ways to approach things.
+
+43
+00:01:36,880 --> 00:01:38,260
+And none of it's going to sync in,
+
+44
+00:01:38,360 --> 00:01:39,500
+you might watch both of them and go,
+
+45
+00:01:39,560 --> 00:01:40,520
+they both make a lot of sense.
+
+46
+00:01:40,640 --> 00:01:41,180
+Grid is easy,
+
+47
+00:01:41,280 --> 00:01:42,140
+and then try to use it,
+
+48
+00:01:42,180 --> 00:01:42,960
+and you might get stuck.
+
+49
+00:01:43,340 --> 00:01:45,180
+Make sure when you're learning something like this
+
+50
+00:01:45,180 --> 00:01:46,180
+that you're practicing it.
+
+51
+00:01:46,460 --> 00:01:47,700
+But as much as possible
+
+52
+00:01:47,700 --> 00:01:49,580
+I'm trying to eliminate some properties,
+
+53
+00:01:49,840 --> 00:01:51,460
+some things that we don't need to be using
+
+54
+00:01:51,460 --> 00:01:53,060
+because there's so many out there for grid,
+
+55
+00:01:53,060 --> 00:01:55,180
+I want to focus on the ones that we do need
+
+56
+00:01:55,180 --> 00:01:57,280
+to really understand it and on the ones
+
+57
+00:01:57,280 --> 00:01:59,000
+that we can use to simplify our life,
+
+58
+00:01:59,080 --> 00:02:00,980
+especially with media queries and other things.
+
+59
+00:02:01,060 --> 00:02:02,060
+All right, so for this one,
+
+60
+00:02:02,100 --> 00:02:03,360
+I'm actually building out this layout
+
+61
+00:02:03,360 --> 00:02:05,660
+that you can see here, which is in Figma right now,
+
+62
+00:02:05,700 --> 00:02:07,080
+but this is from Front-end Mentor
+
+63
+00:02:07,080 --> 00:02:07,740
+and I'm doing it
+
+64
+00:02:07,740 --> 00:02:09,340
+just because I was trying to find a nice layout
+
+65
+00:02:09,340 --> 00:02:11,980
+that we could build that would require grid
+
+66
+00:02:11,980 --> 00:02:13,760
+and this looks pretty gritty to me.
+
+67
+00:02:14,160 --> 00:02:16,540
+So we're going to use this as our example,
+
+68
+00:02:16,680 --> 00:02:17,560
+but what I've actually done
+
+69
+00:02:17,560 --> 00:02:19,720
+is I've actually done quite a bit of work already
+
+70
+00:02:20,180 --> 00:02:22,040
+in getting things styled,
+
+71
+00:02:22,040 --> 00:02:25,280
+but I haven't applied anything to do with Grid yet at all.
+
+72
+00:02:26,060 --> 00:02:27,220
+Now if you'd like to follow along,
+
+73
+00:02:27,300 --> 00:02:29,380
+the GitHub repo for this is linked down below
+
+74
+00:02:29,380 --> 00:02:31,360
+and I've included the starting CSS.
+
+75
+00:02:31,560 --> 00:02:32,720
+So exactly what I have here
+
+76
+00:02:32,720 --> 00:02:35,940
+and this style.css will be the finished version of it.
+
+77
+00:02:36,280 --> 00:02:37,340
+So if you want to follow along
+
+78
+00:02:37,340 --> 00:02:39,380
+or play with what I have to start with
+
+79
+00:02:39,380 --> 00:02:40,340
+you can do just that.
+
+80
+00:02:41,180 --> 00:02:42,060
+Let's jump in there.
+
+81
+00:02:42,180 --> 00:02:43,460
+Here I have my testimonial grid
+
+82
+00:02:43,460 --> 00:02:47,000
+and actually, let's just go take a quick look at my markup.
+
+83
+00:02:47,820 --> 00:02:49,600
+And so basically, I have my main here
+
+84
+00:02:49,600 --> 00:02:52,160
+which I set as my testimonial grid.
+
+85
+00:02:52,740 --> 00:02:53,920
+And then inside my Main,
+
+86
+00:02:54,020 --> 00:02:56,140
+I've just put each one of these card type things
+
+87
+00:02:56,140 --> 00:02:58,640
+as its own article, with a class of text of testimonial
+
+88
+00:02:58,640 --> 00:03:01,080
+and a few other utility classes and things on there
+
+89
+00:03:01,080 --> 00:03:01,860
+that aren't too important.
+
+90
+00:03:02,240 --> 00:03:03,140
+But what's really important
+
+91
+00:03:03,140 --> 00:03:04,580
+is that these the direct children,
+
+92
+00:03:04,700 --> 00:03:05,960
+these articles right here.
+
+93
+00:03:06,820 --> 00:03:08,520
+And so what I'm gonna do is come over to my style
+
+94
+00:03:08,520 --> 00:03:09,900
+where we have my testimonial grid.
+
+95
+00:03:10,100 --> 00:03:11,580
+And I think we know what we wanna do.
+
+96
+00:03:11,780 --> 00:03:13,160
+I have the first thing to start with Grid
+
+97
+00:03:13,160 --> 00:03:14,720
+is we do need a display of Grid.
+
+98
+00:03:15,020 --> 00:03:16,220
+And I won't tell you how many times
+
+99
+00:03:16,220 --> 00:03:17,760
+I've actually forgotten to do that.
+
+100
+00:03:17,760 --> 00:03:21,280
+And when you do display grid, generally speaking,
+
+101
+00:03:21,420 --> 00:03:22,540
+nothing will really change.
+
+102
+00:03:22,640 --> 00:03:24,380
+And this is actually one of the things I like about grid
+
+103
+00:03:24,380 --> 00:03:25,960
+compared to Flexbox, Flexbox will work.
+
+104
+00:03:26,060 --> 00:03:26,960
+It gives you the columns,
+
+105
+00:03:27,380 --> 00:03:28,560
+but sometimes those columns don't do
+
+106
+00:03:28,560 --> 00:03:29,400
+what you want them to do
+
+107
+00:03:29,400 --> 00:03:30,940
+and you have to finick around a little bit
+
+108
+00:03:30,940 --> 00:03:31,840
+and get things to, you know,
+
+109
+00:03:31,900 --> 00:03:33,160
+it can be a little bit strange
+
+110
+00:03:33,160 --> 00:03:35,780
+if it doesn't do exactly what you want it to early on.
+
+111
+00:03:36,400 --> 00:03:37,100
+Whereas with grid,
+
+112
+00:03:37,180 --> 00:03:39,360
+you do display grid, generally not much changes.
+
+113
+00:03:39,900 --> 00:03:42,100
+Sometimes if you had did it and there's paragraphs,
+
+114
+00:03:42,140 --> 00:03:43,940
+all of a sudden things might become double spaced
+
+115
+00:03:43,940 --> 00:03:46,660
+because with grid and with FlexX,
+
+116
+00:03:46,660 --> 00:03:48,260
+the direct children, so the grid items
+
+117
+00:03:48,260 --> 00:03:50,620
+or the flex items no longer have collapsing margins.
+
+118
+00:03:50,860 --> 00:03:52,720
+So that can be a little thing that can get in your way
+
+119
+00:03:52,720 --> 00:03:54,360
+but we have no margins between these
+
+120
+00:03:54,360 --> 00:03:55,760
+so absolutely nothing changes
+
+121
+00:03:56,360 --> 00:03:58,120
+but we do need some spacing between them.
+
+122
+00:03:58,240 --> 00:04:00,700
+And this is where people will sometimes use margin
+
+123
+00:04:00,700 --> 00:04:03,520
+to create spacing or of course we have gap
+
+124
+00:04:03,520 --> 00:04:05,780
+and I'm going to recommend gap 100% of the time
+
+125
+00:04:05,780 --> 00:04:07,400
+because we need vertical spacing
+
+126
+00:04:07,400 --> 00:04:08,900
+and we need horizontal spacing.
+
+127
+00:04:09,380 --> 00:04:11,120
+Vertical spacing and horizontal spacing
+
+128
+00:04:11,120 --> 00:04:12,340
+I always get those backwards.
+
+129
+00:04:12,520 --> 00:04:14,120
+If you've been following for a while, you know that.
+
+130
+00:04:15,060 --> 00:04:18,040
+And because we want this spacing to all be equal everywhere
+
+131
+00:04:18,040 --> 00:04:19,500
+Gap makes a lot of sense.
+
+132
+00:04:19,940 --> 00:04:21,760
+But in general with the Gap property,
+
+133
+00:04:21,900 --> 00:04:24,280
+by doing it we don't get gaps on the outside
+
+134
+00:04:24,280 --> 00:04:25,760
+of any elements and things like that.
+
+135
+00:04:25,800 --> 00:04:27,020
+Like if you wanted to add margins
+
+136
+00:04:27,660 --> 00:04:29,500
+through a grid system of any kind,
+
+137
+00:04:29,600 --> 00:04:30,780
+it gets a little bit annoying
+
+138
+00:04:30,780 --> 00:04:32,720
+even if it's just columns going across
+
+139
+00:04:32,720 --> 00:04:33,820
+and you don't even have rows
+
+140
+00:04:34,440 --> 00:04:36,560
+I'd always always always recommend Gap now
+
+141
+00:04:36,560 --> 00:04:39,280
+and margins I'm using less and less and less
+
+142
+00:04:39,280 --> 00:04:40,540
+for little spacing things.
+
+143
+00:04:41,160 --> 00:04:42,240
+So let's come in,
+
+144
+00:04:42,280 --> 00:04:43,480
+I think it's a 1.5 rim.
+
+145
+00:04:44,300 --> 00:04:48,440
+maybe it's it too, that looks pretty good. So I'll stick with that, and we're started! We have a grid
+
+146
+00:04:48,440 --> 00:04:52,280
+and we have my gap and one of the first things I'm going to say is if you are working with grid,
+
+147
+00:04:52,420 --> 00:04:58,240
+make sure that you use your dev tools. So I am going to open those and in my dev tools,
+
+148
+00:04:58,380 --> 00:05:01,760
+I'm going to be bringing them off screen just so it doesn't take up too much room.
+
+149
+00:05:02,080 --> 00:05:06,720
+But what I'm going to do – I'm in the accessibility tab, let's go and just go to my inspector,
+
+150
+00:05:06,720 --> 00:05:10,180
+Here, I have this grid on here,
+
+151
+00:05:10,300 --> 00:05:11,140
+and it's a little toggle.
+
+152
+00:05:11,380 --> 00:05:13,680
+I am in Firefox and I like Firefoxes,
+
+153
+00:05:13,740 --> 00:05:15,820
+especially for demos because things are much bigger
+
+154
+00:05:15,820 --> 00:05:16,840
+and easier to see.
+
+155
+00:05:17,240 --> 00:05:18,580
+And we're going to be looking at our line numbers
+
+156
+00:05:18,580 --> 00:05:19,440
+and a few other things.
+
+157
+00:05:19,860 --> 00:05:21,380
+Chrome has all of these things too,
+
+158
+00:05:21,420 --> 00:05:23,300
+it has the area names, it has line numbers
+
+159
+00:05:23,780 --> 00:05:25,100
+and these visualizations.
+
+160
+00:05:25,340 --> 00:05:26,680
+So whichever browser you're in,
+
+161
+00:05:26,740 --> 00:05:28,760
+it works almost exactly the same.
+
+162
+00:05:29,440 --> 00:05:30,520
+You can see your grid,
+
+163
+00:05:30,600 --> 00:05:32,580
+you can change the color of the grid.
+
+164
+00:05:32,660 --> 00:05:34,040
+So actually let's go to a darker color
+
+165
+00:05:34,040 --> 00:05:35,420
+just so we can see it a bit better.
+
+166
+00:05:36,120 --> 00:05:41,460
+may be something like that just wait it's something that pops or will read but something
+
+167
+00:05:41,460 --> 00:05:48,320
+that pops a bit on our layout and again you can do that chrome or firefox and safari actually
+
+168
+00:05:48,320 --> 00:05:53,320
+there's safari's new chrome inspector is really really good you can even there's some scrolling
+
+169
+00:05:53,320 --> 00:05:58,600
+issue sometimes you might get with overlaying grids and stuff safari's new one is surprisingly
+
+170
+00:05:58,600 --> 00:06:04,640
+powerful and good that's what happens when jen simmons is on the team um so we have display
+
+171
+00:06:04,640 --> 00:06:05,500
+And so with a grid that's there,
+
+172
+00:06:05,700 --> 00:06:07,540
+we can see my gaps that are coming in now,
+
+173
+00:06:07,860 --> 00:06:09,460
+and, but we, of courseoup need some columns.
+
+174
+00:06:09,800 --> 00:06:11,920
+And, this is the first thing I'm gonna say,
+
+175
+00:06:12,380 --> 00:06:13,900
+if you are setting up a grid
+
+176
+00:06:13,900 --> 00:06:16,320
+and you're not really comfortable with using grids,
+
+177
+00:06:16,480 --> 00:06:18,000
+one of the hardest things to know
+
+178
+00:06:18,000 --> 00:06:19,600
+is how many columns you might need?
+
+179
+00:06:20,360 --> 00:06:21,660
+So I'm actually gonna come on here
+
+180
+00:06:21,660 --> 00:06:23,260
+and I'm gonna grab my pen tool,
+
+181
+00:06:23,480 --> 00:06:24,820
+not my pen tool, my pencil tool,
+
+182
+00:06:24,940 --> 00:06:27,020
+which I don't know the shortcut of because I never use it.
+
+183
+00:06:28,260 --> 00:06:31,420
+We're gonna pull that open and I always, always recommend,
+
+184
+00:06:31,600 --> 00:06:32,920
+and we can't see it cause there we go.
+
+185
+00:06:33,160 --> 00:06:33,860
+We can see it now.
+
+186
+00:06:34,440 --> 00:06:36,700
+Figma chooses the color of it based on the background
+
+187
+00:06:36,700 --> 00:06:39,060
+and I was drawing on the purple so I chose a white pencil.
+
+188
+00:06:39,780 --> 00:06:41,440
+So there's the container that I'm inside,
+
+189
+00:06:41,520 --> 00:06:42,240
+that's my main grid,
+
+190
+00:06:42,820 --> 00:06:45,340
+and then I clearly need to have something that goes here
+
+191
+00:06:45,340 --> 00:06:47,440
+but that does need to come into this area here,
+
+192
+00:06:47,540 --> 00:06:48,740
+so let's highlight that in white too,
+
+193
+00:06:48,920 --> 00:06:50,380
+so that line continues here.
+
+194
+00:06:50,980 --> 00:06:53,340
+Here's the nice easy one that goes all the way down,
+
+195
+00:06:53,480 --> 00:06:53,940
+like that,
+
+196
+00:06:54,780 --> 00:06:56,820
+but look, we're looking up here,
+
+197
+00:06:56,880 --> 00:06:58,460
+you might go I need a big one, a small one,
+
+198
+00:06:58,500 --> 00:07:00,280
+and a small one but don't forget over here,
+
+199
+00:07:00,420 --> 00:07:01,300
+this gets split too.
+
+200
+00:07:01,300 --> 00:07:03,900
+So I need to split this one across like that as well
+
+201
+00:07:04,520 --> 00:07:06,280
+This is where it can really help you visualize
+
+202
+00:07:06,780 --> 00:07:12,600
+how many rows and how many columns you actually need because when you're looking at a design sometimes you miss things and
+
+203
+00:07:12,600 --> 00:07:17,580
+Sometimes you need three rows instead of two or six rows instead of three depending on what you need to do
+
+204
+00:07:18,580 --> 00:07:20,240
+Even now I get tripped up sometimes
+
+205
+00:07:20,240 --> 00:07:23,160
+And I eventually get it if I'm not drawing on top of it and this takes
+
+206
+00:07:23,160 --> 00:07:28,860
+Three seconds to do and then it just makes it a lot easier. So I know I need 1 2 3 4 columns
+
+207
+00:07:28,860 --> 00:07:33,020
+I also need to have two rows, but I'm not going to declare them
+
+208
+00:07:33,020 --> 00:07:38,760
+I'm going to talk more about that soon, but I'm only going to declare my columns for now. So I'm gonna say grid
+
+209
+00:07:39,460 --> 00:07:44,180
+Template columns which is how we can declare our columns because we're setting up our template
+
+210
+00:07:44,180 --> 00:07:49,480
+so it's the template columns that the items will live on so grid template columns and
+
+211
+00:07:50,040 --> 00:07:53,800
+There's one unit if you're new to grid. We'll go slowly with this
+
+212
+00:07:53,800 --> 00:07:57,000
+So here I'm just gonna make this a bit bigger to give myself a bit more room
+
+213
+00:07:57,320 --> 00:07:58,760
+So we can see everything that I'm gonna write.
+
+214
+00:07:59,560 --> 00:08:00,920
+And grid template columns,
+
+215
+00:08:01,000 --> 00:08:01,940
+we have to say what they're gonna be.
+
+216
+00:08:02,000 --> 00:08:03,040
+So you could come in here and say,
+
+217
+00:08:03,160 --> 00:08:03,920
+I have a hundred pixels.
+
+218
+00:08:04,100 --> 00:08:05,580
+And I'm just gonna do one and hit save.
+
+219
+00:08:05,860 --> 00:08:08,060
+And now I have one column that's a hundred pixels.
+
+220
+00:08:08,620 --> 00:08:10,960
+And then I could just put a space and do 100 pixels.
+
+221
+00:08:11,200 --> 00:08:12,220
+And now I have two columns.
+
+222
+00:08:12,740 --> 00:08:15,440
+And then I could say pixels and have three columns.
+
+223
+00:08:16,100 --> 00:08:16,320
+Cool.
+
+224
+00:08:17,400 --> 00:08:18,460
+That works really well.
+
+225
+00:08:19,720 --> 00:08:21,720
+Another one you can do is come in with percentages,
+
+226
+00:08:22,600 --> 00:08:25,200
+25%, 25 and 25%.
+
+227
+00:08:25,200 --> 00:08:28,880
+And okay, so that's working and it might look like it's not working
+
+228
+00:08:28,880 --> 00:08:30,000
+But it's cos it's hiding so there we go
+
+229
+00:08:30,000 --> 00:08:32,360
+we have three columns going all the way across that way and
+
+230
+00:08:33,180 --> 00:08:36,340
+One thing we want to do is actually divide this space up equally
+
+231
+00:08:36,340 --> 00:08:39,860
+So one we keep one way we can do that is with the Fr unit
+
+232
+00:08:39,860 --> 00:08:45,540
+So one Fr. This is my new grid only I would say new because it's been around for a while
+
+233
+00:08:45,540 --> 00:08:46,740
+But it's a grid only unit
+
+234
+00:08:46,740 --> 00:08:51,760
+which is like it sort of uses the flexbox algorithm from what I understand of it and
+
+235
+00:08:51,760 --> 00:08:54,780
+It's basically a fraction. So one fraction one fraction one fraction
+
+236
+00:08:54,780 --> 00:09:00,260
+So we're saying divide all of those up equally now, you can do more with fr's than this
+
+237
+00:09:00,260 --> 00:09:03,520
+But I find most of the time you just want nice even columns
+
+238
+00:09:03,520 --> 00:09:08,260
+And so this is a really nice way to get it to say each one is getting an equal amount of space
+
+239
+00:09:08,700 --> 00:09:12,660
+There is more complexity to how this works, but we're not going to dive into that
+
+240
+00:09:12,660 --> 00:09:15,720
+We want to keep things simple and almost every time you use it
+
+241
+00:09:15,720 --> 00:09:18,740
+That's going to be the result that you get is three equal columns
+
+242
+00:09:18,740 --> 00:09:20,720
+Or if you did five you get five equal columns
+
+243
+00:09:20,720 --> 00:09:22,120
+So on and so forth now
+
+244
+00:09:22,700 --> 00:09:25,140
+I'm gonna make this guy a little bigger again because
+
+245
+00:09:25,580 --> 00:09:31,140
+What happens with grid is sometimes you end up doing that or I just said five so you end up actually putting in five and
+
+246
+00:09:31,660 --> 00:09:34,020
+Then when you want like to change this
+
+247
+00:09:34,020 --> 00:09:36,740
+It's a little frustrating or even typing it out whenever I went to fire went to fire
+
+248
+00:09:36,740 --> 00:09:41,480
+It's kind of annoying and they realized a lot of the time we're gonna want equal for all of them
+
+249
+00:09:41,480 --> 00:09:44,800
+so that's where we have the repeat function that we can use and
+
+250
+00:09:44,800 --> 00:09:47,360
+In repeat you say how many times you want to repeat it?
+
+251
+00:09:47,560 --> 00:09:49,300
+Put a comma and then say what you want to do
+
+252
+00:09:49,300 --> 00:09:50,380
+So let's put a hundred pixels again
+
+253
+00:09:50,380 --> 00:09:51,440
+just so we can see that working.
+
+254
+00:09:52,120 --> 00:09:54,580
+And so it's repeated three columns at a hundred pixels,
+
+255
+00:09:55,140 --> 00:09:56,680
+but of course I don't want a hundred pixels.
+
+256
+00:09:56,780 --> 00:09:57,900
+We saw that a four works.
+
+257
+00:09:57,900 --> 00:10:00,440
+So I can just say three and one fr
+
+258
+00:10:00,840 --> 00:10:02,100
+and that gives me three columns
+
+259
+00:10:02,100 --> 00:10:03,380
+that are one ifr each.
+
+260
+00:10:03,780 --> 00:10:05,740
+Except of course I just said this to three.
+
+261
+00:10:05,860 --> 00:10:06,600
+But just thinking back,
+
+262
+00:10:06,660 --> 00:10:07,960
+we actually want that to be four right?
+
+263
+00:10:08,380 --> 00:10:09,040
+There we go.
+
+264
+00:10:09,180 --> 00:10:10,820
+Because again, why is it four?
+
+265
+00:10:10,960 --> 00:10:13,420
+Let's go look we have one, two, three, four columns
+
+266
+00:10:13,420 --> 00:10:14,560
+on my layer, not three.
+
+267
+00:10:14,740 --> 00:10:15,600
+That was a little silly me.
+
+268
+00:10:15,900 --> 00:10:16,440
+There we go.
+
+269
+00:10:16,940 --> 00:10:18,800
+So we get my four columns going across
+
+270
+00:10:18,800 --> 00:10:22,000
+And you'll notice I haven't set any rows yet.
+
+271
+00:10:22,080 --> 00:10:24,020
+And actually four now, let's bring this back to three
+
+272
+00:10:24,020 --> 00:10:25,380
+because it looks a little nicer for the moment.
+
+273
+00:10:25,680 --> 00:10:27,160
+And we'll go back to four in a second.
+
+274
+00:10:27,760 --> 00:10:29,200
+And I just wanna talk a little bit
+
+275
+00:10:29,200 --> 00:10:31,100
+about setting grid templates rows.
+
+276
+00:10:31,500 --> 00:10:33,200
+Because I think this is one of those places
+
+277
+00:10:33,200 --> 00:10:36,080
+where people add complexity that they don't need to add.
+
+278
+00:10:36,480 --> 00:10:38,840
+Because notice if I say there's three columns,
+
+279
+00:10:39,020 --> 00:10:40,700
+my content, if I have more than three,
+
+280
+00:10:41,120 --> 00:10:43,280
+so when I have more than three children in here,
+
+281
+00:10:43,360 --> 00:10:45,180
+like these articles, if I have more than three of them,
+
+282
+00:10:45,280 --> 00:10:47,320
+they just go Oh, I got to the third column,
+
+283
+00:10:47,320 --> 00:10:53,220
+There's no more columns in this. I'm gonna create a row and come down here. And this is where you might hear the terms
+
+284
+00:10:53,740 --> 00:11:00,120
+Implicit and explicit grid. So this is where I've explicitly declared three columns. So I've said there are three columns
+
+285
+00:11:00,120 --> 00:11:02,300
+I haven't said how many rows there are
+
+286
+00:11:02,300 --> 00:11:06,060
+so the grid is creating new rows for me as it needs to and these are
+
+287
+00:11:06,060 --> 00:11:09,640
+Implicit rows because it's just going there's content here that needs somewhere to live
+
+288
+00:11:09,640 --> 00:11:13,460
+I'm gonna make that space automatically without you telling me to do that and
+
+289
+00:11:14,300 --> 00:11:16,740
+and as much with the web in general,
+
+290
+00:11:16,900 --> 00:11:18,600
+we're so used to like items, you know,
+
+291
+00:11:18,720 --> 00:11:20,880
+the auto height where it just grows by itself.
+
+292
+00:11:20,940 --> 00:11:21,680
+We place new items,
+
+293
+00:11:21,800 --> 00:11:23,580
+they stack on top of each other by default.
+
+294
+00:11:23,900 --> 00:11:27,060
+We're very used to that idea of new things
+
+295
+00:11:27,060 --> 00:11:28,280
+just sort of coming in and going
+
+296
+00:11:28,280 --> 00:11:29,320
+where they should go automatically.
+
+297
+00:11:30,000 --> 00:11:33,440
+So when I can, I try not to declare grid template rows.
+
+298
+00:11:33,720 --> 00:11:35,380
+I will declare it when I need to,
+
+299
+00:11:35,460 --> 00:11:36,760
+when I very specific grids
+
+300
+00:11:36,760 --> 00:11:38,540
+where I'm trying to do very specific things
+
+301
+00:11:38,540 --> 00:11:40,480
+that need a bit of finicking around
+
+302
+00:11:40,480 --> 00:11:41,500
+and a bit of finessing
+
+303
+00:11:41,500 --> 00:11:43,480
+and a little bit of other stuff going on.
+
+304
+00:11:43,960 --> 00:11:46,500
+But for the most part,
+
+305
+00:11:47,000 --> 00:11:48,900
+you can get away with grid template rows
+
+306
+00:11:48,900 --> 00:11:51,020
+and not declaring grid template columns.
+
+307
+00:11:51,320 --> 00:11:52,300
+And if that's the case,
+
+308
+00:11:52,400 --> 00:11:54,540
+I strongly recommend that you do that.
+
+309
+00:11:54,740 --> 00:11:56,600
+Because it just gives you a lot less overhead
+
+310
+00:11:56,600 --> 00:11:58,840
+and a lot less to think about when you're making it,
+
+311
+00:11:58,900 --> 00:12:00,880
+just because you just have to worry about your rows
+
+312
+00:12:00,880 --> 00:12:02,840
+and everything just sort of falls into place from there.
+
+313
+00:12:03,100 --> 00:12:04,920
+And what I'm doing here with these explicit columns
+
+314
+00:12:04,920 --> 00:12:06,820
+as I'm saying, also how big they have to be?
+
+315
+00:12:07,060 --> 00:12:09,600
+Whereas with those rows that it's implacently creating
+
+316
+00:12:09,600 --> 00:12:11,260
+or these automatically created rows,
+
+317
+00:12:11,780 --> 00:12:13,080
+it's just doing what it needs to do.
+
+318
+00:12:13,200 --> 00:12:15,320
+It's matching the height of the tallest one,
+
+319
+00:12:15,460 --> 00:12:17,800
+basically, that's a lot like how Flexbox works.
+
+320
+00:12:17,980 --> 00:12:19,100
+If you do display flex,
+
+321
+00:12:19,340 --> 00:12:21,700
+they just all match the height of the tallest item.
+
+322
+00:12:22,140 --> 00:12:23,440
+You can change this behavior
+
+323
+00:12:23,440 --> 00:12:25,820
+and you can get control on your auto rows
+
+324
+00:12:25,820 --> 00:12:28,000
+or auto columns if you fall into that world.
+
+325
+00:12:28,340 --> 00:12:29,880
+But we want to keep things simple for now.
+
+326
+00:12:30,040 --> 00:12:31,220
+So I'm not gonna get into that,
+
+327
+00:12:31,320 --> 00:12:32,380
+but it is a possibility,
+
+328
+00:12:32,800 --> 00:12:34,420
+but let's keep things as simple as we can.
+
+329
+00:12:34,600 --> 00:12:36,620
+So every time you're gonna do a display grid,
+
+330
+00:12:36,980 --> 00:12:38,560
+you'll probably wanna set a gap on there.
+
+331
+00:12:38,560 --> 00:12:40,600
+and then you're going to set up some columns.
+
+332
+00:12:41,140 --> 00:12:43,280
+Then if you need to, start worrying about more.
+
+333
+00:12:43,460 --> 00:12:44,360
+But, we're not going to do that.
+
+334
+00:12:44,680 --> 00:12:45,480
+Let's fix this.
+
+335
+00:12:45,560 --> 00:12:46,360
+We go back up to four.
+
+336
+00:12:46,600 --> 00:12:47,820
+And let's start trying to get this layout
+
+337
+00:12:47,820 --> 00:12:48,860
+to work for us a little bit.
+
+338
+00:12:49,120 --> 00:12:50,740
+And so let's go look back at our layout.
+
+339
+00:12:50,900 --> 00:12:52,160
+And we have this one here,
+
+340
+00:12:52,320 --> 00:12:53,320
+and this one here,
+
+341
+00:12:53,360 --> 00:12:55,740
+that need to span across two columns each.
+
+342
+00:12:56,200 --> 00:12:57,460
+So let's go and create something
+
+343
+00:12:57,460 --> 00:12:58,680
+that can allow us to do that.
+
+344
+00:12:59,220 --> 00:13:01,260
+And what I really like for this type of thing,
+
+345
+00:13:01,380 --> 00:13:03,260
+instead of trying to find like a class,
+
+346
+00:13:03,320 --> 00:13:05,700
+a specific class for each one of those
+
+347
+00:13:05,700 --> 00:13:06,700
+and writing it twice,
+
+348
+00:13:07,240 --> 00:13:08,160
+I'm going to come here,
+
+349
+00:13:08,160 --> 00:13:11,460
+And I'm just going to write, a dollarspan2.
+
+350
+00:13:12,120 --> 00:13:15,020
+and I could call this just span2,
+
+351
+00:13:15,100 --> 00:13:15,940
+I guess, if I wanted to.
+
+352
+00:13:16,620 --> 00:13:17,900
+I just like being really explicit
+
+353
+00:13:17,900 --> 00:13:20,200
+this class should be used with grid.
+
+354
+00:13:20,360 --> 00:13:21,200
+So I start with grid.
+
+355
+00:13:21,340 --> 00:13:22,840
+It's a sort of a little naming convention,
+
+356
+00:13:23,020 --> 00:13:24,400
+but you can name it however you want.
+
+357
+00:13:24,900 --> 00:13:26,720
+You might be saying, well there's no other way to span.
+
+358
+00:13:27,000 --> 00:13:29,320
+There is the multi-column-layout
+
+359
+00:13:29,320 --> 00:13:31,160
+that actually does have spans
+
+360
+00:13:31,160 --> 00:13:34,320
+and it did before grid even existed, I believe.
+
+361
+00:13:35,540 --> 00:13:37,480
+But, and it's a little bit different in how that works.
+
+362
+00:13:37,480 --> 00:13:41,960
+what we're going to do is say my grid column and even here this I guess this
+
+363
+00:13:41,960 --> 00:13:47,800
+could be grid call, call span two just in case you end up with row span two. So
+
+364
+00:13:47,800 --> 00:13:52,940
+let's do that grid call span two and so my grid column will be you only guess
+
+365
+00:13:52,940 --> 00:13:59,140
+span two isn't that so easy? Grid column is a shorthand property and we're going
+
+366
+00:13:59,140 --> 00:14:02,920
+to explore that a little bit more shortly but one nice thing is when you
+
+367
+00:14:02,920 --> 00:14:06,860
+just need to throw spans on staff it just works it doesn't matter that it's a
+
+368
+00:14:06,860 --> 00:14:07,280
+and shortly after that shorthand,
+
+369
+00:14:07,360 --> 00:14:09,700
+it puts it sort of where it should go
+
+370
+00:14:09,700 --> 00:14:11,000
+because you could actually put the span
+
+371
+00:14:11,000 --> 00:14:12,660
+on the start or the end.
+
+372
+00:14:12,780 --> 00:14:14,040
+Anyway, that's going to work.
+
+373
+00:14:14,200 --> 00:14:14,900
+I'm gonna hit save.
+
+374
+00:14:15,140 --> 00:14:17,280
+So it's here, and we'll go over to my HTML.
+
+375
+00:14:18,800 --> 00:14:20,660
+And we're gonna add that into spots
+
+376
+00:14:20,660 --> 00:14:22,500
+where you need it on my first one.
+
+377
+00:14:22,720 --> 00:14:23,920
+So this is my first article.
+
+378
+00:14:24,220 --> 00:14:26,480
+Grid, call, span two.
+
+379
+00:14:26,900 --> 00:14:28,440
+If you're saying that's a long class name,
+
+380
+00:14:28,580 --> 00:14:29,700
+it is, but that's okay.
+
+381
+00:14:30,580 --> 00:14:32,320
+I like longer class names
+
+382
+00:14:32,320 --> 00:14:34,200
+if they really explain to me what they're doing.
+
+383
+00:14:34,360 --> 00:14:34,880
+That's fine.
+
+384
+00:14:34,880 --> 00:14:37,600
+I don't want like a GC S2 or something,
+
+385
+00:14:37,780 --> 00:14:39,180
+cause then I'll never remember that
+
+386
+00:14:39,180 --> 00:14:40,560
+and I'll never really know what it's for
+
+387
+00:14:40,560 --> 00:14:42,700
+or if somebody else comes to my code, they don't know.
+
+388
+00:14:42,940 --> 00:14:44,560
+Whereas this, it's very explicit.
+
+389
+00:14:44,720 --> 00:14:47,120
+If somebody were to come across this they see it.
+
+390
+00:14:47,200 --> 00:14:48,060
+There's a grid and they see
+
+391
+00:14:48,060 --> 00:14:50,800
+these are grid columns span two, it's a super clear.
+
+392
+00:14:51,020 --> 00:14:52,560
+So I like clear class names
+
+393
+00:14:52,560 --> 00:14:54,140
+that explain exactly what they're doing.
+
+394
+00:14:55,020 --> 00:14:56,740
+So let's hit safe here and see.
+
+395
+00:14:56,960 --> 00:14:57,620
+Wow, look at that.
+
+396
+00:14:58,480 --> 00:15:00,900
+Now there's some weird funkiness coming up over here
+
+397
+00:15:00,900 --> 00:15:02,460
+because this one is now so long
+
+398
+00:15:02,460 --> 00:15:03,880
+and it's mucking this up
+
+399
+00:15:03,880 --> 00:15:04,860
+because remember they're stretching
+
+400
+00:15:04,860 --> 00:15:06,680
+to try and match each other's heights.
+
+401
+00:15:06,880 --> 00:15:07,380
+But that's okay.
+
+402
+00:15:07,800 --> 00:15:09,220
+We made some nice progress.
+
+403
+00:15:10,080 --> 00:15:12,160
+Where the real issue is actually coming from
+
+404
+00:15:12,160 --> 00:15:14,000
+is this one is in the wrong spot,
+
+405
+00:15:14,280 --> 00:15:15,600
+but I put it there on purpose.
+
+406
+00:15:16,340 --> 00:15:17,500
+And not on purpose
+
+407
+00:15:17,500 --> 00:15:19,620
+because of, it would actually make more sense
+
+408
+00:15:19,620 --> 00:15:21,680
+if this was one, two, three,
+
+409
+00:15:22,000 --> 00:15:23,020
+whoops, let's get that in black,
+
+410
+00:15:23,140 --> 00:15:26,380
+three, four, five, right?
+
+411
+00:15:26,480 --> 00:15:28,360
+Cause then that would be the order I see them in here.
+
+412
+00:15:28,740 --> 00:15:31,140
+The thing is, in this Figma design,
+
+413
+00:15:31,440 --> 00:15:32,580
+we have a mobile layout too.
+
+414
+00:15:32,580 --> 00:15:34,520
+And Janet is the third one.
+
+415
+00:15:35,020 --> 00:15:36,200
+That's the third one here.
+
+416
+00:15:36,360 --> 00:15:37,560
+I like working mobile first,
+
+417
+00:15:37,700 --> 00:15:40,520
+we're going to talk about the media queries in a second though,
+
+418
+00:15:40,600 --> 00:15:43,480
+but right now we need to get this one over here
+
+419
+00:15:43,480 --> 00:15:46,280
+or Ciara over here, one or the other,
+
+420
+00:15:46,780 --> 00:15:49,700
+and to do that there's lots of different approaches
+
+421
+00:15:49,700 --> 00:15:51,780
+and different ways we could do something like that.
+
+422
+00:15:52,320 --> 00:15:56,420
+This is where for me, utility classes don't quite work
+
+423
+00:15:56,420 --> 00:15:59,780
+just because you're placing things in very specific spots
+
+424
+00:15:59,780 --> 00:16:00,840
+or moving things around.
+
+425
+00:16:01,640 --> 00:16:04,420
+I just find it easier to actually target the class
+
+426
+00:16:04,420 --> 00:16:05,260
+that I want to work on.
+
+427
+00:16:05,480 --> 00:16:09,200
+And I could actually just give this specific one a class
+
+428
+00:16:09,200 --> 00:16:10,600
+and target it.
+
+429
+00:16:10,620 --> 00:16:12,500
+Cause if I look here, it's all very generic.
+
+430
+00:16:12,500 --> 00:16:16,220
+My classes, I have testimonial, the background colors
+
+431
+00:16:16,220 --> 00:16:17,600
+and a few other things going on there
+
+432
+00:16:17,600 --> 00:16:20,320
+but it's all very generic classes to style this up.
+
+433
+00:16:21,700 --> 00:16:23,440
+So there's different ways of selecting it.
+
+434
+00:16:23,560 --> 00:16:24,620
+Just for simplicity sake
+
+435
+00:16:24,620 --> 00:16:27,060
+and not wondering about creating a class for it.
+
+436
+00:16:27,360 --> 00:16:29,580
+I am going to use the nth child selector
+
+437
+00:16:29,580 --> 00:16:31,920
+or alters the last child selector, I guess,
+
+438
+00:16:32,080 --> 00:16:33,500
+just because it's gonna be faster for now.
+
+439
+00:16:33,720 --> 00:16:36,000
+If you wanted to make this a little bit more plug and play,
+
+440
+00:16:36,240 --> 00:16:38,140
+you could then actually give them very specific
+
+441
+00:16:38,140 --> 00:16:39,780
+classes that could make this work,
+
+442
+00:16:40,500 --> 00:16:41,860
+and but this is my test.
+
+443
+00:16:42,040 --> 00:16:43,940
+It is a testimonial, so we're gonna say
+
+444
+00:16:45,960 --> 00:16:47,260
+testimonial last child.
+
+445
+00:16:48,120 --> 00:16:50,440
+And because that's gonna select the last child,
+
+446
+00:16:50,520 --> 00:16:53,640
+let's say background red important,
+
+447
+00:16:54,380 --> 00:16:55,500
+just to see, there you go.
+
+448
+00:16:55,620 --> 00:16:57,380
+We can see that it's actually selecting the one
+
+449
+00:16:57,380 --> 00:16:58,500
+that we wanted to select,
+
+450
+00:16:58,500 --> 00:16:59,660
+So let's get rid of that.
+
+451
+00:17:00,480 --> 00:17:02,480
+And now we can get a little bit more
+
+452
+00:17:02,480 --> 00:17:04,380
+about placing items on the grid
+
+453
+00:17:04,380 --> 00:17:06,240
+when they're not going where you want them to go.
+
+454
+00:17:06,920 --> 00:17:09,140
+And this is where Line Numbers really come in.
+
+455
+00:17:09,280 --> 00:17:11,580
+And I've had my Grid Overlay on this entire time.
+
+456
+00:17:12,040 --> 00:17:14,240
+It's really important when you're using your Grid Overlay,
+
+457
+00:17:14,340 --> 00:17:15,400
+which has changed colors on me,
+
+458
+00:17:15,540 --> 00:17:17,160
+this happens sometimes when things refresh
+
+459
+00:17:17,160 --> 00:17:19,120
+even though it's still set to red here.
+
+460
+00:17:19,380 --> 00:17:20,440
+Just because it makes it a bit easier
+
+461
+00:17:20,440 --> 00:17:21,380
+to see on top of the purple.
+
+462
+00:17:22,380 --> 00:17:23,660
+I'll change that back to red.
+
+463
+00:17:24,560 --> 00:17:27,400
+But even if you're not working with it on all the time,
+
+464
+00:17:27,400 --> 00:17:29,560
+If you're gonna touch your line numbers,
+
+465
+00:17:29,760 --> 00:17:32,260
+I highly highly highly recommend
+
+466
+00:17:32,260 --> 00:17:35,420
+that you go ahead and have this on
+
+467
+00:17:35,420 --> 00:17:37,220
+because seeing the line numbers
+
+468
+00:17:37,220 --> 00:17:39,440
+makes it so much easier to work with.
+
+469
+00:17:40,480 --> 00:17:43,580
+And so I want it to be on my column four
+
+470
+00:17:43,580 --> 00:17:44,980
+to my column five.
+
+471
+00:17:45,560 --> 00:17:46,440
+And we want it from,
+
+472
+00:17:46,620 --> 00:17:48,100
+let's go look actually at the figma design.
+
+473
+00:17:48,560 --> 00:17:50,260
+I want it to be from the top here
+
+474
+00:17:50,260 --> 00:17:52,780
+and go all the way down to the bottom on this side.
+
+475
+00:17:53,500 --> 00:17:55,000
+So to be able to do that,
+
+476
+00:17:55,200 --> 00:17:56,260
+let's start with the column,
+
+477
+00:17:56,260 --> 00:17:59,380
+So we're gonna get this in the right spot. So we saw the grid column
+
+478
+00:18:00,700 --> 00:18:06,360
+Property before so I'm saying before we said span to so let's just do that for fun span to just to see that
+
+479
+00:18:06,360 --> 00:18:09,820
+Oops, we need that and it works it goes across the two like that
+
+480
+00:18:10,260 --> 00:18:15,320
+But in this case, I don't want to be doing a span to actually want to say start at line number four
+
+481
+00:18:15,320 --> 00:18:21,160
+So we can actually just put in grid column four and it will start at the line four and it leaves this one empty
+
+482
+00:18:21,800 --> 00:18:22,920
+why is it doing that?
+
+483
+00:18:23,000 --> 00:18:23,460
+What's happening?
+
+484
+00:18:24,360 --> 00:18:26,560
+So, grid column as I mentioned is a shorthand
+
+485
+00:18:26,560 --> 00:18:28,680
+and the shorthand is for grid column start
+
+486
+00:18:29,520 --> 00:18:32,080
+and my grid column end
+
+487
+00:18:33,260 --> 00:18:37,280
+and basically if I just do a grid column like that four,
+
+488
+00:18:37,440 --> 00:18:39,540
+it's just putting it as a grid column start
+
+489
+00:18:39,540 --> 00:18:41,760
+and it's not putting a grid column end
+
+490
+00:18:41,760 --> 00:18:43,940
+just because it doesn't even need to do that
+
+491
+00:18:43,940 --> 00:18:45,500
+we don't really need a grid column end
+
+492
+00:18:46,080 --> 00:18:48,200
+but just for fun, I could put three here
+
+493
+00:18:48,580 --> 00:18:49,660
+and we could say that the grid,
+
+494
+00:18:49,660 --> 00:18:52,460
+let's do a start, grid-column start is at three
+
+495
+00:18:52,460 --> 00:18:54,740
+and grid-column end is at five
+
+496
+00:18:54,740 --> 00:18:57,200
+and we get the same idea as the span two.
+
+497
+00:18:58,080 --> 00:19:01,100
+The reason I prefer span two when I can use it
+
+498
+00:19:01,100 --> 00:19:04,300
+is because here the span two class is working for this one
+
+499
+00:19:04,300 --> 00:19:06,400
+and it's working for this one over here.
+
+500
+00:19:06,800 --> 00:19:07,940
+It doesn't matter where they are
+
+501
+00:19:07,940 --> 00:19:10,660
+and even we're gonna end up movie this one over in a minute
+
+502
+00:19:10,660 --> 00:19:12,300
+and it doesn't matter where they are
+
+503
+00:19:12,300 --> 00:19:13,380
+or where they're lining up.
+
+504
+00:19:14,180 --> 00:19:16,880
+Span two is just saying it doesn't matter where you start
+
+505
+00:19:16,880 --> 00:19:17,740
+but the end,
+
+506
+00:19:17,740 --> 00:19:18,680
+And we just wanna make sure
+
+507
+00:19:18,680 --> 00:19:20,240
+we're spanning across two columns.
+
+508
+00:19:20,560 --> 00:19:21,920
+So this one's a little bit more versatile
+
+509
+00:19:22,440 --> 00:19:24,600
+than locking in with specific line numbers.
+
+510
+00:19:24,980 --> 00:19:25,920
+And just like before I said,
+
+511
+00:19:26,100 --> 00:19:28,260
+don't create rows unless you need to create rows.
+
+512
+00:19:28,480 --> 00:19:29,820
+Don't start using line numbers
+
+513
+00:19:29,820 --> 00:19:31,420
+unless you need to use line numbers.
+
+514
+00:19:31,800 --> 00:19:33,180
+Start as simple as possible
+
+515
+00:19:33,180 --> 00:19:35,420
+and add the complexity as you need to
+
+516
+00:19:35,420 --> 00:19:36,840
+to be able to get the layout that you need.
+
+517
+00:19:37,260 --> 00:19:39,660
+So first display grid, then my gap,
+
+518
+00:19:39,940 --> 00:19:41,240
+then I set up my columns.
+
+519
+00:19:41,320 --> 00:19:43,000
+Then I go, Oh, I need a few of these to span.
+
+520
+00:19:43,120 --> 00:19:45,980
+So I make a very general generic way to span columns.
+
+521
+00:19:46,460 --> 00:19:47,340
+I'm not saying you're going
+
+522
+00:19:47,340 --> 00:19:52,920
+from 1 to 3, and then oh, you're going to from 2 to 4, whatever, we need to get that
+
+523
+00:19:52,920 --> 00:19:53,240
+one to.
+
+524
+00:19:53,620 --> 00:19:57,060
+We actually, in this case, we can get rid of the end, because I don't need to worry
+
+525
+00:19:57,060 --> 00:19:58,580
+about that, but we need it to start at 4.
+
+526
+00:19:59,080 --> 00:20:01,500
+So we need it to be here, but I also need it to move up.
+
+527
+00:20:01,700 --> 00:20:02,840
+I need it starting at the top.
+
+528
+00:20:03,620 --> 00:20:08,060
+So I'm going to come here, and then this is when I'm finally going to worry about my row.
+
+529
+00:20:08,400 --> 00:20:10,520
+So we can do grid row, and we can do start on here.
+
+530
+00:20:10,820 --> 00:20:12,040
+And where do we want it to start?
+
+531
+00:20:12,400 --> 00:20:13,480
+At the top, at 1.
+
+532
+00:20:13,940 --> 00:20:14,860
+Oh my goodness!
+
+533
+00:20:15,040 --> 00:20:16,400
+It's all coming together so quickly.
+
+534
+00:20:16,400 --> 00:20:17,260
+now what happened?
+
+535
+00:20:17,380 --> 00:20:19,160
+Why did everything just fall into place?
+
+536
+00:20:19,480 --> 00:20:20,860
+Again, start simple,
+
+537
+00:20:21,080 --> 00:20:21,860
+start moving things
+
+538
+00:20:21,860 --> 00:20:22,840
+and all of a sudden your layout
+
+539
+00:20:22,840 --> 00:20:24,180
+might come together more than you think.
+
+540
+00:20:25,140 --> 00:20:27,040
+And so by saying grid rows start one.
+
+541
+00:20:27,520 --> 00:20:28,620
+Let's take this one off.
+
+542
+00:20:30,900 --> 00:20:32,340
+It's going in the order of the DOM.
+
+543
+00:20:32,760 --> 00:20:34,160
+So this is the,
+
+544
+00:20:35,260 --> 00:20:37,100
+you know what, let's choose the third one here.
+
+545
+00:20:40,020 --> 00:20:40,460
+Testimonial,
+
+546
+00:20:41,980 --> 00:20:43,700
+and child three,
+
+547
+00:20:43,700 --> 00:20:48,880
+the sky, background, red, important.
+
+548
+00:20:49,140 --> 00:20:49,940
+I just want to highlight
+
+549
+00:20:49,940 --> 00:20:52,720
+this is my third one in my dom.
+
+550
+00:20:52,860 --> 00:20:54,220
+So it's one, two, three.
+
+551
+00:20:55,040 --> 00:20:56,480
+The third one is going here
+
+552
+00:20:56,480 --> 00:20:58,740
+because that's just following the natural flow
+
+553
+00:20:58,740 --> 00:20:59,760
+that the items will go in.
+
+554
+00:20:59,860 --> 00:21:01,380
+First column, second column, third column,
+
+555
+00:21:01,440 --> 00:21:02,160
+it just goes and it goes,
+
+556
+00:21:02,280 --> 00:21:03,780
+oh, we're out of room, I'm gonna go down.
+
+557
+00:21:04,140 --> 00:21:05,580
+I'm gonna go to where this guy is.
+
+558
+00:21:05,700 --> 00:21:06,520
+And then we get that one
+
+559
+00:21:06,520 --> 00:21:08,120
+and then it sort of moves across from there.
+
+560
+00:21:08,280 --> 00:21:10,120
+As soon as I do grid row start one,
+
+561
+00:21:10,120 --> 00:21:14,460
+I'm saying, I need you, your grid column start is four,
+
+562
+00:21:14,700 --> 00:21:16,220
+so you're living in this box,
+
+563
+00:21:16,420 --> 00:21:19,080
+but I also need you to start at line number one,
+
+564
+00:21:19,220 --> 00:21:20,320
+which is the very top.
+
+565
+00:21:20,660 --> 00:21:22,620
+So as soon as I do that and I save that,
+
+566
+00:21:23,100 --> 00:21:26,300
+it has to live here, which means this one can't live there.
+
+567
+00:21:26,500 --> 00:21:28,900
+So it pushes down into the next empty cell
+
+568
+00:21:28,900 --> 00:21:31,540
+that it can find, and it just automatically goes there.
+
+569
+00:21:31,820 --> 00:21:33,700
+Even though this is the third one in the DOM,
+
+570
+00:21:34,260 --> 00:21:36,940
+it's grid-smart, and you can overlap.
+
+571
+00:21:37,020 --> 00:21:38,620
+Actually overlapping content with grid
+
+572
+00:21:38,620 --> 00:21:41,820
+is just, it's wonderful, but it won't do it by default.
+
+573
+00:21:41,960 --> 00:21:43,220
+You have to work at it a little bit
+
+574
+00:21:43,220 --> 00:21:44,640
+to actually get things to overlap.
+
+575
+00:21:46,060 --> 00:21:49,160
+So that gets pushed up, this falls down over here
+
+576
+00:21:49,160 --> 00:21:50,900
+because that's the next empty cell
+
+577
+00:21:50,900 --> 00:21:51,940
+that was available to it.
+
+578
+00:21:52,320 --> 00:21:53,300
+So awesome.
+
+579
+00:21:54,200 --> 00:21:55,920
+And I guess we can turn that red off now.
+
+580
+00:21:56,000 --> 00:21:56,620
+We don't need that.
+
+581
+00:21:57,880 --> 00:21:59,680
+And the last thing is we need this
+
+582
+00:21:59,680 --> 00:22:01,260
+to fill up all that space
+
+583
+00:22:01,260 --> 00:22:03,400
+and these are stretching, they look really ugly,
+
+584
+00:22:03,500 --> 00:22:04,880
+but as soon as this is allowed to stretch,
+
+585
+00:22:04,920 --> 00:22:06,060
+it should fix that problem.
+
+586
+00:22:06,860 --> 00:22:08,180
+So how can we do that?
+
+587
+00:22:08,180 --> 00:22:13,280
+hopefully you've already come up with an idea or two we can come in with a grid row end and
+
+588
+00:22:14,080 --> 00:22:14,940
+There's a few options
+
+589
+00:22:14,940 --> 00:22:15,820
+I could choose
+
+590
+00:22:15,820 --> 00:22:21,920
+My three because remember we have a one here my line number two here or and my line number three down here
+
+591
+00:22:21,920 --> 00:22:25,020
+So I couldn't throw a three and then the layout is done
+
+592
+00:22:25,960 --> 00:22:27,360
+Or you might have said well
+
+593
+00:22:27,360 --> 00:22:30,180
+I can do a span and you're right you could you could they span, too
+
+594
+00:22:30,180 --> 00:22:35,060
+And then it's gonna start at the top and span across to exact same result
+
+595
+00:22:35,060 --> 00:22:39,540
+There's no difference between them. So there we go, we're spanning across the two of them that way
+
+596
+00:22:39,540 --> 00:22:43,880
+another option is to use the shorthand. So instead of writing all of this,
+
+597
+00:22:44,740 --> 00:22:49,820
+when you use the shorthand, you do grid row, and then you're saying, where do you want it to start?
+
+598
+00:22:49,820 --> 00:22:55,120
+And then where do you want it to end? So 1 over 3? we'll start at line number 1 and go 2
+
+599
+00:22:55,120 --> 00:23:01,620
+to 3, or you could do 1 over span 2. And that will give you the exact same result.
+
+600
+00:23:01,620 --> 00:23:07,500
+and you can just in this case where you're declaring a starting row, using
+
+601
+00:23:07,500 --> 00:23:10,340
+whether it's a span or whether it's something else it doesn't matter too
+
+602
+00:23:10,340 --> 00:23:14,440
+much if you like the idea of this actually being utility class just like I
+
+603
+00:23:14,440 --> 00:23:21,340
+did before you could come in and create something like that a grid row span to
+
+604
+00:23:21,340 --> 00:23:29,140
+and do a grid grow span to and use that in conjunction with a grid row Start
+
+605
+00:23:29,140 --> 00:23:31,560
+There's the possibility with things like that
+
+606
+00:23:31,560 --> 00:23:33,300
+that because this is a shorthand
+
+607
+00:23:33,300 --> 00:23:34,660
+it might actually get overridden
+
+608
+00:23:34,660 --> 00:23:36,820
+and you can run into a little bit of finickiness.
+
+609
+00:23:37,420 --> 00:23:41,160
+So if I need to do a specific starting line
+
+610
+00:23:41,160 --> 00:23:43,880
+or a specific ending line or anything like that,
+
+611
+00:23:43,960 --> 00:23:46,020
+I tend to declare it on the selector where I'm working
+
+612
+00:23:46,020 --> 00:23:47,580
+instead of using utility class.
+
+613
+00:23:48,060 --> 00:23:50,780
+But if I don't need to declare anything specific,
+
+614
+00:23:51,120 --> 00:23:52,500
+that's where I like the utility classes
+
+615
+00:23:52,500 --> 00:23:55,400
+that work based on just where its natural flow is.
+
+616
+00:23:55,720 --> 00:23:57,900
+And we're going to get to the media queries in one second
+
+617
+00:23:57,900 --> 00:23:59,560
+And I just want to recap a little bit
+
+618
+00:23:59,560 --> 00:24:00,600
+of the simplicity of this.
+
+619
+00:24:00,680 --> 00:24:01,560
+And I've gone over it before,
+
+620
+00:24:01,740 --> 00:24:03,940
+but first display grid because we need it.
+
+621
+00:24:04,280 --> 00:24:05,580
+GAP, because that makes our spacing
+
+622
+00:24:05,580 --> 00:24:07,320
+and our life easier there,
+
+623
+00:24:07,500 --> 00:24:08,860
+and then set up your columns.
+
+624
+00:24:09,320 --> 00:24:11,140
+Don't set up rows unless you have to.
+
+625
+00:24:11,260 --> 00:24:12,540
+We didn't have to in this case,
+
+626
+00:24:12,560 --> 00:24:14,720
+even though we did have to span multiple rows.
+
+627
+00:24:14,860 --> 00:24:16,520
+Pretty nice and pretty neat.
+
+628
+00:24:16,620 --> 00:24:18,480
+And I think makes things a lot easier to maintain
+
+629
+00:24:18,480 --> 00:24:19,720
+and a lot easier to think about.
+
+630
+00:24:20,500 --> 00:24:21,920
+We can use spans,
+
+631
+00:24:22,200 --> 00:24:23,440
+just to span columns.
+
+632
+00:24:23,560 --> 00:24:24,960
+It doesn't matter where things are starting.
+
+633
+00:24:25,220 --> 00:24:26,540
+And then if you need to,
+
+634
+00:24:26,540 --> 00:24:30,320
+we can do specific things of start in this exact location
+
+635
+00:24:30,320 --> 00:24:34,460
+or start here and end over here and different things like that.
+
+636
+00:24:34,980 --> 00:24:39,700
+So, always do as general as possible and as generic as possible.
+
+637
+00:24:40,100 --> 00:24:41,720
+Simplify things as much as possible
+
+638
+00:24:41,720 --> 00:24:44,580
+and then, when you need to get very specific,
+
+639
+00:24:44,800 --> 00:24:46,920
+then add that specificness to your grid
+
+640
+00:24:46,920 --> 00:24:48,960
+just to get things to fall where they need to.
+
+641
+00:24:49,100 --> 00:24:51,360
+But a lot of the time, you don't even need stuff like this.
+
+642
+00:24:51,440 --> 00:24:54,140
+This is really when you're getting into these weird layouts like this
+
+643
+00:24:54,140 --> 00:24:55,800
+where things are sort of getting a little fancier.
+
+644
+00:24:55,800 --> 00:24:57,840
+And next, we want our immediate queries.
+
+645
+00:24:58,160 --> 00:24:59,580
+So, I'm gonna open up responsive mode,
+
+646
+00:24:59,720 --> 00:25:01,620
+the shortcut is Shift-Command-M.
+
+647
+00:25:02,380 --> 00:25:04,720
+I dunno know if that's probably a Command-Shift-M.
+
+648
+00:25:04,780 --> 00:25:07,640
+I'm guessing if you're on a Mac, that is in your dev tools.
+
+649
+00:25:07,820 --> 00:25:10,640
+Also, I get asked a lot about this, so that's this little guy.
+
+650
+00:25:11,140 --> 00:25:13,580
+Uh, not this little guy, this little guy in your dev tools.
+
+651
+00:25:14,140 --> 00:25:16,340
+And in Chrome, this exact same icon
+
+652
+00:25:16,340 --> 00:25:17,700
+is on this side over here.
+
+653
+00:25:17,980 --> 00:25:20,060
+So, just because I always get asked about this.
+
+654
+00:25:20,480 --> 00:25:24,100
+And I mentioned the nice thing with responsiveness in grid
+
+655
+00:25:24,100 --> 00:25:27,040
+So we will do an extra little stage in this
+
+656
+00:25:27,040 --> 00:25:29,300
+that wouldn't really be for this layout specifically.
+
+657
+00:25:29,740 --> 00:25:31,140
+But let's fix this at the beginning.
+
+658
+00:25:31,700 --> 00:25:35,080
+And this is where I can actually leave everything I've done,
+
+659
+00:25:35,140 --> 00:25:35,900
+except for one thing.
+
+660
+00:25:36,240 --> 00:25:37,760
+There's a few little things we'll have to do,
+
+661
+00:25:37,800 --> 00:25:39,400
+but I'm going to grab this grid template columns.
+
+662
+00:25:39,980 --> 00:25:41,600
+I'm going to remove it from here and hit Save,
+
+663
+00:25:41,620 --> 00:25:42,780
+and let's see what happens.
+
+664
+00:25:43,000 --> 00:25:43,980
+We still have a layout.
+
+665
+00:25:44,180 --> 00:25:46,060
+And what I'm going to do is come here and say,
+
+666
+00:25:46,120 --> 00:25:50,520
+app media and we'll just say a min width of 40.
+
+667
+00:25:50,520 --> 00:25:55,640
+I'm guessing and let's put in my testimonial grid
+
+668
+00:25:56,180 --> 00:25:58,260
+and we're gonna redefine my columns there.
+
+669
+00:25:58,980 --> 00:26:00,640
+One thing you'll notice is even though,
+
+670
+00:26:01,140 --> 00:26:02,180
+actually let's just remove this
+
+671
+00:26:02,180 --> 00:26:03,800
+so we can see that we don't have anything.
+
+672
+00:26:04,400 --> 00:26:05,500
+We actually have a bit of,
+
+673
+00:26:06,040 --> 00:26:07,860
+the layout's working even though
+
+674
+00:26:07,860 --> 00:26:09,580
+I haven't declared my columns here.
+
+675
+00:26:10,420 --> 00:26:13,060
+But the columns spacing has gotten
+
+676
+00:26:13,060 --> 00:26:15,280
+a little mucked up because it's going to the autospacing
+
+677
+00:26:15,280 --> 00:26:15,960
+like this one.
+
+678
+00:26:16,600 --> 00:26:19,080
+You can see here we have a really narrow column,
+
+679
+00:26:19,080 --> 00:26:20,120
+here we have a bigger column.
+
+680
+00:26:20,500 --> 00:26:22,180
+So that's why I do like declaring them.
+
+681
+00:26:22,580 --> 00:26:24,700
+The reason that it's just magically working
+
+682
+00:26:24,700 --> 00:26:26,500
+is because of this grid column start.
+
+683
+00:26:26,740 --> 00:26:27,800
+If I turn this off,
+
+684
+00:26:28,500 --> 00:26:29,740
+the whole thing falls apart.
+
+685
+00:26:30,520 --> 00:26:34,000
+But it's going, this has to be on the fourth column.
+
+686
+00:26:34,440 --> 00:26:36,760
+So that means I need to have four columns for this to work
+
+687
+00:26:36,760 --> 00:26:37,960
+and then everything will just sort of
+
+688
+00:26:37,960 --> 00:26:39,540
+slot into those empty spaces.
+
+689
+00:26:39,900 --> 00:26:41,880
+So that's why we sort of have a layout right now.
+
+690
+00:26:42,480 --> 00:26:43,920
+But what we're gonna say is,
+
+691
+00:26:44,020 --> 00:26:44,960
+actually let's put it right here,
+
+692
+00:26:45,560 --> 00:26:46,240
+my media query,
+
+693
+00:26:46,240 --> 00:26:47,780
+and then I'm going to grab this
+
+694
+00:26:47,780 --> 00:26:49,960
+and also put it inside the media query.
+
+695
+00:26:50,960 --> 00:26:53,460
+And now we have this at my large screen sizes.
+
+696
+00:26:53,900 --> 00:26:55,300
+And then, I think we should change
+
+697
+00:26:55,300 --> 00:26:56,640
+where that's happening at.
+
+698
+00:26:56,880 --> 00:26:58,540
+And actually I'm going to bring this up to a 50
+
+699
+00:26:58,540 --> 00:27:00,180
+cause it was getting a little bit narrow there.
+
+700
+00:27:00,340 --> 00:27:01,320
+And we can see, there we go.
+
+701
+00:27:01,420 --> 00:27:01,780
+Look at that.
+
+702
+00:27:01,880 --> 00:27:03,340
+It's going and then it's working
+
+703
+00:27:03,920 --> 00:27:05,140
+except it's not really working
+
+704
+00:27:05,140 --> 00:27:06,660
+cause these are still spanning to.
+
+705
+00:27:07,440 --> 00:27:09,220
+This would depend a little bit on your layout
+
+706
+00:27:09,220 --> 00:27:10,540
+but I think most of the time
+
+707
+00:27:10,540 --> 00:27:12,660
+your spans are going to be happening
+
+708
+00:27:12,660 --> 00:27:15,000
+once the grid is sort of more defined.
+
+709
+00:27:15,000 --> 00:27:16,980
+and when things are kicking in.
+
+710
+00:27:17,080 --> 00:27:18,920
+So I'm also going to bring that utility class here.
+
+711
+00:27:19,140 --> 00:27:21,340
+This isn't the most organized CSS at the moment,
+
+712
+00:27:21,900 --> 00:27:24,420
+but just to say, we want to start without any spans,
+
+713
+00:27:24,500 --> 00:27:26,200
+without any columns, anything like that.
+
+714
+00:27:26,260 --> 00:27:28,600
+But I'm still using my display of grid
+
+715
+00:27:28,600 --> 00:27:31,120
+at the small screen size, because then I have my gap
+
+716
+00:27:31,120 --> 00:27:32,340
+and all my spacing is there.
+
+717
+00:27:33,040 --> 00:27:34,500
+And actually, let's just turn off
+
+718
+00:27:34,500 --> 00:27:36,000
+the inspector thing now.
+
+719
+00:27:37,680 --> 00:27:40,640
+So yeah, just for the purpose of having that gap,
+
+720
+00:27:40,700 --> 00:27:41,460
+I think that's wonderful.
+
+721
+00:27:41,620 --> 00:27:43,280
+And then we get to our larger screen size
+
+722
+00:27:43,280 --> 00:27:46,040
+and then we get our columns and everything falls in
+
+723
+00:27:46,040 --> 00:27:47,460
+and then we go back down that way.
+
+724
+00:27:48,080 --> 00:27:49,640
+And so that works really really nicely
+
+725
+00:27:49,640 --> 00:27:51,760
+and it's just about keeping things organized
+
+726
+00:27:51,760 --> 00:27:53,860
+within your media queries where you need them to be.
+
+727
+00:27:54,100 --> 00:27:56,800
+There are ways of working without media queries with...
+
+728
+00:27:56,800 --> 00:27:58,460
+you might see it with like a repeat autofit
+
+729
+00:27:58,460 --> 00:27:59,360
+and other things like that
+
+730
+00:27:59,360 --> 00:28:01,580
+that are actually fairly easy to use
+
+731
+00:28:01,580 --> 00:28:03,980
+but on a layout like this it just doesn't work
+
+732
+00:28:03,980 --> 00:28:05,100
+and I don't want to dive into it
+
+733
+00:28:05,100 --> 00:28:06,600
+because we're just adding...
+
+734
+00:28:06,600 --> 00:28:07,720
+we're keeping grid simple today.
+
+735
+00:28:07,860 --> 00:28:10,060
+Hopefully this is still keeping it very simple for you
+
+736
+00:28:10,520 --> 00:28:12,420
+and moving things into the media query
+
+737
+00:28:12,420 --> 00:28:14,780
+Hopefully it doesn't throw you off too much there.
+
+738
+00:28:15,140 --> 00:28:16,140
+But again all of this code,
+
+739
+00:28:16,220 --> 00:28:17,940
+if you want to look at it in more detail,
+
+740
+00:28:18,060 --> 00:28:19,720
+the GitHub repo is linked below
+
+741
+00:28:19,720 --> 00:28:21,200
+and you can access all the code there.
+
+742
+00:28:21,400 --> 00:28:23,180
+Now the last thing I want to talk about
+
+743
+00:28:23,180 --> 00:28:25,300
+that I find actually simplifies things
+
+744
+00:28:25,300 --> 00:28:27,980
+with grid a little bit is a way
+
+745
+00:28:27,980 --> 00:28:30,100
+that I used to not want to work at all.
+
+746
+00:28:30,240 --> 00:28:30,960
+But I find when it comes
+
+747
+00:28:30,960 --> 00:28:32,600
+to media queries and all of that,
+
+748
+00:28:32,700 --> 00:28:34,460
+it makes grid just wonderful.
+
+749
+00:28:34,960 --> 00:28:36,720
+And it does take a little bit more setup,
+
+750
+00:28:37,040 --> 00:28:38,980
+but I find it's a nice easy way
+
+751
+00:28:38,980 --> 00:28:40,320
+to work with grid when you have
+
+752
+00:28:40,320 --> 00:28:41,980
+more complex layouts like this.
+
+753
+00:28:41,980 --> 00:28:43,760
+In doing this, we're also gonna explore
+
+754
+00:28:43,760 --> 00:28:45,600
+a few other properties that we haven't looked at yet.
+
+755
+00:28:46,320 --> 00:28:48,040
+And so what I'm gonna do is, I'm actually gonna come
+
+756
+00:28:48,040 --> 00:28:49,840
+and I'm gonna delete all of this.
+
+757
+00:28:50,180 --> 00:28:52,000
+I'm gonna delete the media query,
+
+758
+00:28:52,100 --> 00:28:52,920
+because we are gonna need it,
+
+759
+00:28:52,980 --> 00:28:54,060
+but I'm gonna delete all of that.
+
+760
+00:28:55,100 --> 00:28:56,920
+And we're left back where we started
+
+761
+00:28:56,920 --> 00:28:59,620
+with our display grid at the very beginning.
+
+762
+00:28:59,620 --> 00:29:01,080
+And this is just another approach,
+
+763
+00:29:01,140 --> 00:29:02,560
+it's why I'm breaking it sort of into two.
+
+764
+00:29:02,980 --> 00:29:04,840
+But it's one of my favorite ways to work with grid.
+
+765
+00:29:05,380 --> 00:29:06,960
+The way we just looked at, I think,
+
+766
+00:29:07,040 --> 00:29:08,160
+is the best way to understand
+
+767
+00:29:08,160 --> 00:29:09,200
+how grid is working,
+
+768
+00:29:09,560 --> 00:29:11,020
+and the simple ways of setting up
+
+769
+00:29:11,020 --> 00:29:11,820
+a nice simple grid.
+
+770
+00:29:12,140 --> 00:29:14,040
+This is when you need more complex layouts
+
+771
+00:29:14,040 --> 00:29:15,280
+with a little bit more happening
+
+772
+00:29:15,280 --> 00:29:16,980
+where things change a little bit more.
+
+773
+00:29:17,440 --> 00:29:19,180
+So we're going to break away from the actual design
+
+774
+00:29:19,180 --> 00:29:20,860
+as well a little bit with this one.
+
+775
+00:29:21,380 --> 00:29:22,700
+And what I'm going to do is actually set up
+
+776
+00:29:22,700 --> 00:29:24,380
+some grid template areas.
+
+777
+00:29:25,380 --> 00:29:26,520
+And with grid template areas,
+
+778
+00:29:26,660 --> 00:29:28,140
+the syntax of it's a little weird,
+
+779
+00:29:28,420 --> 00:29:31,480
+but I always, always do it where I put it onto its own line
+
+780
+00:29:32,360 --> 00:29:33,740
+because the grid template areas
+
+781
+00:29:33,740 --> 00:29:35,160
+tend to get a little bit complex,
+
+782
+00:29:35,560 --> 00:29:38,000
+and we're going to see that once we get to the media query,
+
+783
+00:29:38,080 --> 00:29:39,380
+it's going to have a little bit more going.
+
+784
+00:29:39,380 --> 00:29:42,480
+And it's also kind of weird because it does all go in strings
+
+785
+00:29:43,020 --> 00:29:44,160
+But I'm gonna write 1 here
+
+786
+00:29:44,160 --> 00:29:49,700
+and then actually gonna go on a new line and in quotations can be single or double quotations, three
+
+787
+00:29:52,900 --> 00:29:53,300
+and
+
+788
+00:29:53,300 --> 00:29:55,240
+five and
+
+789
+00:29:55,240 --> 00:29:59,540
+I always forget my semicolon at the end. So just don't forget after the last one
+
+790
+00:29:59,540 --> 00:30:00,500
+You do need a semicolon
+
+791
+00:30:00,960 --> 00:30:06,240
+and let's let's save and let's see what that's actually done because this has done something even though we don't see a difference yet and
+
+792
+00:30:06,240 --> 00:30:08,120
+And to be able to see it, once again,
+
+793
+00:30:08,200 --> 00:30:10,760
+we'll open up our visualization tools on my grid.
+
+794
+00:30:10,960 --> 00:30:12,000
+So we can open the grid here,
+
+795
+00:30:12,140 --> 00:30:14,060
+and I have line numbers enabled.
+
+796
+00:30:14,500 --> 00:30:17,300
+So if you don't see the line areas,
+
+797
+00:30:17,520 --> 00:30:19,400
+my area names are enabled.
+
+798
+00:30:19,800 --> 00:30:21,740
+So it's within the Layout tab,
+
+799
+00:30:21,820 --> 00:30:23,240
+this is in Chrome and in Firefox.
+
+800
+00:30:24,000 --> 00:30:26,500
+Chrome, it's these little, little tabs that show up here
+
+801
+00:30:26,500 --> 00:30:28,740
+whereas in Firefox they're really just in your face.
+
+802
+00:30:28,920 --> 00:30:31,460
+So I like the in your face ones a little bit better.
+
+803
+00:30:31,940 --> 00:30:33,680
+And we can see we have one, two, three, four,
+
+804
+00:30:33,740 --> 00:30:34,840
+and five at the bottom.
+
+805
+00:30:36,560 --> 00:30:38,080
+Now, what's the point of this?
+
+806
+00:30:38,680 --> 00:30:40,720
+Let's go down into my media query
+
+807
+00:30:40,720 --> 00:30:43,720
+and here we're gonna write testDemonialGrid
+
+808
+00:30:44,680 --> 00:30:47,980
+and we're gonna say gridTemplateAreas
+
+809
+00:30:47,980 --> 00:30:49,140
+and we're gonna redefine them.
+
+810
+00:30:49,780 --> 00:30:50,380
+So let's come here.
+
+811
+00:30:50,540 --> 00:30:52,700
+And what we're gonna say is we're gonna have...
+
+812
+00:30:52,700 --> 00:30:53,960
+We're gonna match the design for now.
+
+813
+00:30:54,120 --> 00:30:57,600
+So it's a one, one and five.
+
+814
+00:30:57,960 --> 00:30:59,760
+And let's go back into Figma.
+
+815
+00:31:00,140 --> 00:31:01,400
+And so if you remember in the markup
+
+816
+00:31:01,400 --> 00:31:03,100
+this is one, this is number two,
+
+817
+00:31:03,100 --> 00:31:04,320
+Then this is number three.
+
+818
+00:31:04,760 --> 00:31:07,400
+This is number four and then this one is number five.
+
+819
+00:31:07,600 --> 00:31:08,700
+And again, draw things.
+
+820
+00:31:08,800 --> 00:31:10,440
+So we have five here and five here,
+
+821
+00:31:11,000 --> 00:31:12,340
+four there, four here.
+
+822
+00:31:13,140 --> 00:31:14,660
+Let's make that four all in white
+
+823
+00:31:14,660 --> 00:31:16,340
+and then we have a one there and a one here.
+
+824
+00:31:16,620 --> 00:31:17,660
+So we have area one,
+
+825
+00:31:17,920 --> 00:31:19,440
+one, two, five.
+
+826
+00:31:19,600 --> 00:31:21,100
+And then we come down to this next row.
+
+827
+00:31:21,460 --> 00:31:22,680
+Three, four, four, five.
+
+828
+00:31:23,120 --> 00:31:24,100
+So I can write that
+
+829
+00:31:24,100 --> 00:31:25,680
+and I'd usually don't number it like this
+
+830
+00:31:25,680 --> 00:31:27,120
+I actually give the meaningful names
+
+831
+00:31:27,120 --> 00:31:29,220
+but so that was
+
+832
+00:31:30,740 --> 00:31:32,440
+three, four, five.
+
+833
+00:31:33,440 --> 00:31:34,560
+uh, four, four, or five?
+
+834
+00:31:35,040 --> 00:31:37,140
+Four, four, or five, and that was one, one,
+
+835
+00:31:38,080 --> 00:31:40,020
+it wasn't one, one, five, one, one, two, five.
+
+836
+00:31:40,440 --> 00:31:42,580
+There we go, two, five, and when we look at here,
+
+837
+00:31:42,640 --> 00:31:45,320
+what it did is it made one row for each of these.
+
+838
+00:31:45,540 --> 00:31:48,140
+So every set of quotation marks is going to be a row
+
+839
+00:31:48,880 --> 00:31:51,020
+and so here we just had one by itself,
+
+840
+00:31:51,300 --> 00:31:52,900
+two by itself, three by itself.
+
+841
+00:31:52,980 --> 00:31:54,560
+That's exactly what we see right now.
+
+842
+00:31:54,700 --> 00:31:56,720
+One, two, three, just like we have one, two, three,
+
+843
+00:31:56,780 --> 00:31:57,840
+four, five here.
+
+844
+00:31:58,260 --> 00:32:00,600
+Every set of quotation marks here is the row
+
+845
+00:32:00,600 --> 00:32:02,340
+and then within this row
+
+846
+00:32:02,340 --> 00:32:07,960
+I'm creating different columns and for each one of these columns. I'm giving them a name and so let's hit save and
+
+847
+00:32:08,500 --> 00:32:13,240
+Look at that some magic happened, but you'll notice it's not using the area as well
+
+848
+00:32:13,240 --> 00:32:15,440
+But here we can see I have 1 1 2
+
+849
+00:32:15,440 --> 00:32:23,020
+5 5 continues down here for goes across these two and three is here and we'll even notice it puts these like solid red
+
+850
+00:32:23,020 --> 00:32:24,500
+Lines around the areas
+
+851
+00:32:24,500 --> 00:32:30,920
+To highlight where they are in the visualization tools where is here like between 4 and 4 there's no solid red line
+
+852
+00:32:30,920 --> 00:32:33,320
+so it tries to help us show us where things are.
+
+853
+00:32:33,640 --> 00:32:35,500
+So that just means we need to use these grid areas
+
+854
+00:32:35,500 --> 00:32:37,060
+and again, is this more set-up.
+
+855
+00:32:37,240 --> 00:32:38,940
+Yes, it definitely is more set up
+
+856
+00:32:38,940 --> 00:32:42,020
+and I just find it works so well
+
+857
+00:32:42,020 --> 00:32:43,580
+once you've taken the time to do this.
+
+858
+00:32:44,640 --> 00:32:47,020
+I'm gonna use this because of the way the layout is
+
+859
+00:32:47,020 --> 00:32:48,380
+with the nth-child Selector.
+
+860
+00:32:48,680 --> 00:32:50,900
+A lot of the time I'm doing this on a component
+
+861
+00:32:50,900 --> 00:32:52,920
+that has like, you know, it might be your name,
+
+862
+00:32:53,040 --> 00:32:55,960
+your name, your role, a description, an image.
+
+863
+00:32:56,020 --> 00:32:57,660
+So you can choose those selectors
+
+864
+00:32:57,660 --> 00:32:59,360
+that you've already made in those classes
+
+865
+00:32:59,360 --> 00:33:01,260
+and be applying all of that to those.
+
+866
+00:33:01,900 --> 00:33:03,080
+But what we'll do is we'll come here.
+
+867
+00:33:03,400 --> 00:33:05,640
+We'll say, and I'll set this up really fast.
+
+868
+00:33:06,100 --> 00:33:07,500
+So we'll fast forward for a second.
+
+869
+00:33:10,330 --> 00:33:12,330
+Okay, so I've set up my nth-child selectors
+
+870
+00:33:12,330 --> 00:33:14,930
+and each one is my testimonie nth-child,
+
+871
+00:33:14,950 --> 00:33:16,730
+so my first child, second child, third child,
+
+872
+00:33:16,930 --> 00:33:18,530
+fourth child, and my fifth child,
+
+873
+00:33:18,750 --> 00:33:21,630
+and then to place something on a grid area
+
+874
+00:33:21,630 --> 00:33:23,410
+you just want to come in and say
+
+875
+00:33:23,410 --> 00:33:24,930
+what grid area they should be living on.
+
+876
+00:33:25,130 --> 00:33:27,550
+So my first one should be living on grid area one,
+
+877
+00:33:28,030 --> 00:33:28,990
+and you'll notice here
+
+878
+00:33:28,990 --> 00:33:32,990
+here, it's not in quotation marks and this is something I think gets some people caught
+
+879
+00:33:32,990 --> 00:33:33,390
+off guard.
+
+880
+00:33:33,630 --> 00:33:37,530
+Here they're using one, here we're setting everything in like a string type of thing.
+
+881
+00:33:37,630 --> 00:33:40,490
+It's in quotation marks, here you don't use quotation marks.
+
+882
+00:33:40,590 --> 00:33:46,870
+Just to be aware of that and then we can do a two and then we can use a three and we can
+
+883
+00:33:46,870 --> 00:33:49,950
+put a four and then we can set a five here.
+
+884
+00:33:50,290 --> 00:33:54,510
+Hit save and my layout comes together there's one issue with it but look at that.
+
+885
+00:33:54,510 --> 00:33:57,310
+it's come together and then we can shrink that down
+
+886
+00:33:57,310 --> 00:34:01,950
+and it pops over and then comes back and what I really like about grid areas
+
+887
+00:34:01,950 --> 00:34:06,650
+is, check this out! Let's take this guy, copy them and paste
+
+888
+00:34:06,650 --> 00:34:09,770
+them. And maybe we do this at 30 rem instead
+
+889
+00:34:09,770 --> 00:34:11,310
+so we're going to create two different ones
+
+890
+00:34:11,310 --> 00:34:17,250
+and we do one one um let's just do one one then we'll do a
+
+891
+00:34:17,250 --> 00:34:20,310
+two five a three five
+
+892
+00:34:21,970 --> 00:34:27,150
+And then a four, five, and hit save.
+
+893
+00:34:27,590 --> 00:34:28,990
+And so now let's go all the way down.
+
+894
+00:34:29,230 --> 00:34:30,930
+They all stack on top of each other,
+
+895
+00:34:30,970 --> 00:34:31,830
+just like we had it.
+
+896
+00:34:32,230 --> 00:34:35,290
+Then I come to here and I get my one, two,
+
+897
+00:34:35,390 --> 00:34:37,430
+five, three, five, four five.
+
+898
+00:34:37,450 --> 00:34:38,710
+Doesn't really work with this layout,
+
+899
+00:34:38,830 --> 00:34:39,530
+but you can see it's going.
+
+900
+00:34:39,750 --> 00:34:41,730
+Or so maybe we do four, four then across the bottom.
+
+901
+00:34:42,050 --> 00:34:42,810
+And then we hit that.
+
+902
+00:34:43,010 --> 00:34:43,410
+There we go.
+
+903
+00:34:44,370 --> 00:34:45,810
+So we have this layout like that
+
+904
+00:34:45,810 --> 00:34:47,110
+and then we do a larger layout
+
+905
+00:34:47,110 --> 00:34:47,990
+and then it goes that way.
+
+906
+00:34:47,990 --> 00:34:51,070
+and you can just change the layout how you need to
+
+907
+00:34:51,070 --> 00:34:53,330
+at different screen sizes so easily.
+
+908
+00:34:53,930 --> 00:34:55,410
+And what I really love with this
+
+909
+00:34:55,410 --> 00:34:57,090
+is I'm only worried about the parent.
+
+910
+00:34:57,250 --> 00:34:58,790
+I don't have to do anything on the children.
+
+911
+00:34:59,090 --> 00:34:59,830
+This is the children.
+
+912
+00:35:00,150 --> 00:35:01,610
+I set the grid area they live on.
+
+913
+00:35:01,970 --> 00:35:03,670
+I never have to worry about it again,
+
+914
+00:35:03,990 --> 00:35:05,190
+which is just so magical.
+
+915
+00:35:05,590 --> 00:35:07,630
+And for this to be working at this stage,
+
+916
+00:35:07,770 --> 00:35:10,650
+all I've done is display grid, a gap
+
+917
+00:35:10,650 --> 00:35:11,870
+and a grid template areas,
+
+918
+00:35:12,050 --> 00:35:14,750
+and then I'm just redefining the grid template areas
+
+919
+00:35:14,750 --> 00:35:15,510
+for each one.
+
+920
+00:35:15,690 --> 00:35:17,510
+And with the visualization and seeing,
+
+921
+00:35:17,510 --> 00:35:19,750
+Oh, I have a grid area here. I have the grid area here
+
+922
+00:35:19,750 --> 00:35:21,110
+I find this
+
+923
+00:35:21,110 --> 00:35:27,270
+So easy, and so simple to work this way, and I don't even need spans because I'm saying that my one
+
+924
+00:35:27,710 --> 00:35:29,510
+Let's go find him my grid area one
+
+925
+00:35:29,510 --> 00:35:34,850
+Your living on grid area one and grid area one is going across two different columns
+
+926
+00:35:34,850 --> 00:35:39,910
+So it's going to span those two columns. It's wonderful. Now, you might have noticed we ran into that issue
+
+927
+00:35:39,910 --> 00:35:42,770
+I talked about when I deleted my display
+
+928
+00:35:42,770 --> 00:35:44,630
+When I deleted the grid template
+
+929
+00:35:44,630 --> 00:35:47,790
+columns that I'd originally set up with that repeat syntax,
+
+930
+00:35:48,010 --> 00:35:49,890
+where the columns are different sizes.
+
+931
+00:35:50,170 --> 00:35:52,010
+This one's really small and this one's bigger,
+
+932
+00:35:52,190 --> 00:35:53,950
+just because of the way the content is distributed
+
+933
+00:35:53,950 --> 00:35:56,730
+and it's doing its automatic thing to make it work.
+
+934
+00:35:56,950 --> 00:35:58,750
+Which is cool, and it may be that's happy
+
+935
+00:35:58,750 --> 00:36:00,410
+and maybe this is exactly what you need.
+
+936
+00:36:00,870 --> 00:36:02,350
+But if you do wanna ensure that you have
+
+937
+00:36:02,350 --> 00:36:04,330
+columns that are always the same size
+
+938
+00:36:05,490 --> 00:36:08,090
+and you're not actually setting up any columns,
+
+939
+00:36:08,370 --> 00:36:09,970
+we can do this in one spot,
+
+940
+00:36:10,090 --> 00:36:11,350
+and then never have to worry about it,
+
+941
+00:36:11,350 --> 00:36:14,590
+which is coming here and saying grid auto columns.
+
+942
+00:36:15,690 --> 00:36:18,030
+Because these columns are automatically being generated
+
+943
+00:36:18,030 --> 00:36:20,150
+based on my grid template areas,
+
+944
+00:36:20,770 --> 00:36:22,170
+so it's grid auto columns,
+
+945
+00:36:22,410 --> 00:36:24,550
+and then you say what size you want them to be.
+
+946
+00:36:24,910 --> 00:36:27,310
+And that means any automatically generated column,
+
+947
+00:36:27,470 --> 00:36:28,590
+and you can do the same for rows.
+
+948
+00:36:29,190 --> 00:36:32,690
+Any automatically generated column will be 1FR.
+
+949
+00:36:33,110 --> 00:36:36,150
+So if I hit save, now each column is the same size,
+
+950
+00:36:36,490 --> 00:36:37,730
+we get nice even columns,
+
+951
+00:36:37,890 --> 00:36:39,670
+and the layout becomes a little bit more balanced.
+
+952
+00:36:39,670 --> 00:36:43,350
+And if you really like this grid template areas approach of working,
+
+953
+00:36:43,490 --> 00:36:46,370
+but you want to see it with an example where I'm not using nth child and I'm
+
+954
+00:36:46,370 --> 00:36:49,950
+actually doing it in a bit more realistic of a situation perhaps there's a
+
+955
+00:36:49,950 --> 00:36:52,730
+video here for viewing pleasure that you can check out.
+
+956
+00:36:52,790 --> 00:36:52,950
+Right,
+
+957
+00:36:53,010 --> 00:36:56,490
+I dive a lot deeper into that and with that a really big thank you to all of my
+
+958
+00:36:56,490 --> 00:36:57,710
+patrons for their monthly support.
+
+959
+00:36:57,890 --> 00:37:00,190
+I can't do it without you guys and until next time,
+
+960
+00:37:00,290 --> 00:37:02,810
+don't forget to make your part of the Internet just a little bit more awesome.
+
