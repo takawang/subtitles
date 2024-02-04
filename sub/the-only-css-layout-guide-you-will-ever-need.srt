@@ -452,7 +452,7 @@ utilize this to see and visualize what these properties are doing.
 
 114
 00:06:38,989 --> 00:06:43,445
-JustifyContent is going to be the most commonly used Flexbox parent property that you will
+justify-content is going to be the most commonly used Flexbox parent property that you will
 
 115
 00:06:43,726 --> 00:06:44,309
@@ -460,7 +460,7 @@ need to use.
 
 116
 00:06:44,912 --> 00:06:48,348
-And justify content aligns the items or the children
+And justify-content aligns the items or the children
 
 117
 00:06:48,830 --> 00:06:52,620
@@ -468,7 +468,7 @@ in a horizontal direction or whichever direction is the default.
 
 118
 00:06:52,921 --> 00:06:57,062
-So we have flex start, flex end, center, space between, and then space around.
+So we have flex-start, flex-end, center, space between, and then space around.
 
 119
 00:06:57,686 --> 00:07:00,500
@@ -488,11 +488,11 @@ is going to be align content which is
 
 123
 00:07:09,628 --> 00:07:14,267
-Pretty much the same thing as justify content, but it's going to align things vertically.
+Pretty much the same thing as justify-content, but it's going to align things vertically.
 
 124
 00:07:14,508 --> 00:07:18,674
-So we have flex start, flex end, center, space between, and space around.
+So we have flex-start, flex-end, center, space between, and space around.
 
 125
 00:07:19,235 --> 00:07:23,108
@@ -540,11 +540,11 @@ So this is one of the most common ways you can use Flex to set up your...
 
 136
 00:07:54,282 --> 00:07:58,164
-Layouts and now there's another property you can use flex wrap
+Layouts and now there's another property you can use flex-wrap
 
 137
 00:07:58,325 --> 00:08:02,447
-but I'm going to show you ways so that you don't ever need to use Flexwrap.
+but I'm going to show you ways so that you don't ever need to use flex-wrap.
 
 138
 00:08:02,668 --> 00:08:05,078
@@ -556,7 +556,7 @@ There's only a few properties that you really have to know and you're only going
 
 140
 00:08:09,737 --> 00:08:13,738
-So flex grow for example is if you set this to be zero it's going to take up
+So flex-grow for example is if you set this to be zero it's going to take up
 
 141
 00:08:14,099 --> 00:08:17,416
@@ -572,11 +572,11 @@ in this element.
 
 144
 00:08:22,355 --> 00:08:24,025
-And we also have flex bases, so
+And we also have flex-basis, so
 
 145
 00:08:24,306 --> 00:08:27,356
-It's very complex on what Flakespaces does over width.
+It's very complex on what flex-basis does over width.
 
 146
 00:08:27,577 --> 00:08:29,544
