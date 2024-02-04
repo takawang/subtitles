@@ -493,8 +493,7 @@ space around。
 
 124
 00:07:14,508 --> 00:07:18,674
-因此，我們有了 flex-start、flex-end、center、space between 和
-space around。
+因此，我們有了 flex-start、flex-end、center、space-between 和 space around。
 
 125
 00:07:19,235 --> 00:07:23,108
@@ -578,7 +577,7 @@ space around。
 
 145
 00:08:24,306 --> 00:08:27,356
-Flakespaces 對寬度的處理非常複雜。
+flex-basis 對寬度的處理非常複雜
 
 146
 00:08:27,577 --> 00:08:29,544
@@ -586,15 +585,15 @@ Flakespaces 對寬度的處理非常複雜。
 
 147
 00:08:30,046 --> 00:08:33,399
-但它與寬度基本相同，只是多了一些屬性，而且與 Flexbox 的互動更好。
+只是多了一些屬性，而且與 Flexbox 的互動更好。
 
 148
 00:08:33,519 --> 00:08:37,200
-如果你想深入瞭解
+我有在描述放了一個連結，如果你想深入瞭解 flex-basis
 
 149
 00:08:37,682 --> 00:08:42,332
-flex bases，但在使用 Flexbox 時，你應該始終使用 flex-basis，而不是
+但在使用 Flexbox 時，你應該使用 flex-basis，而不是
 width。
 
 150
