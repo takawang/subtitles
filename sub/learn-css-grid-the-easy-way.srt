@@ -1,10 +1,10 @@
 1
 00:00:00,109 --> 00:00:05,310
-Have you just started to learn grid or you've been trying to learn it for a little while now and you just get bogged down in it because
+Have you just started to learn grid or you've been trying to learn it for a little while now
 
 2
 00:00:05,751 --> 00:00:08,020
-There's just a lot of complexity with it, right?
+and you just get bogged down in it because there's just a lot of complexity with it, right?
 
 3
 00:00:08,040 --> 00:00:11,413
